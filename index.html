@@ -67,6 +67,7 @@
           pointer.x = e.targetTouches[0].pageX / window.innerWidth;
           pointer.y = e.targetTouches[0].pageY / window.innerHeight;
           pointer.clicked = true;
+		 audio.play();
         });
         
         cleanBtn.addEventListener("click", cleanCanvas);
@@ -109,6 +110,7 @@
             shaderMaterial.uniforms.u_stop_randomizer.value = new THREE.Vector2(Math.random(), Math.random());
             shaderMaterial.uniforms.u_stop_time.value = 0.;
             pointer.clicked = false;
+		   audio.play();
           }
           shaderMaterial.uniforms.u_stop_time.value += clock.getDelta();
         
