@@ -61,6 +61,9 @@
             pointer.clicked = true;
             audio.play();
           }
+		else{
+			 audio.play();
+		}
         });
         window.addEventListener("touchstart", e => {
           isTouchScreen = true;
@@ -202,6 +205,7 @@ const pointer = {
     x: .66,
     y: .3,
     clicked: true,
+	 audio.play();
 };
 
 // for codepen preview
@@ -294,6 +298,7 @@ function render() {
         shaderMaterial.uniforms.u_stop_randomizer.value = new THREE.Vector2(Math.random(), Math.random());
         shaderMaterial.uniforms.u_stop_time.value = 0.;
         pointer.clicked = false;
+	     audio.play();
     }
     shaderMaterial.uniforms.u_stop_time.value += clock.getDelta();
 
